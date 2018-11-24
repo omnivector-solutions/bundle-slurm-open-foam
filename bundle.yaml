@@ -3,9 +3,11 @@ description: |
   The core SLURM bundle + OpenFOAM.
 applications:
   open-foam:
-    series: bionic
-    charm: "~omnivector/open-foam-2"
+    charm: "~omnivector/open-foam"
     num_units: 0
+    annotations:
+      "gui-x": "-310.0"
+      "gui-y": "-234.0"
   mysql:
     series: xenial
     charm: "cs:mysql"
@@ -17,7 +19,7 @@ applications:
       "gui-x": "90"
       "gui-y": "-122"
   slurm-dbd:
-    charm: "cs:~omnivector/slurm-dbd-1"
+    charm: "cs:~omnivector/slurm-dbd"
     constraints: "cores=2 mem=4G"
     num_units: 1
     to:
@@ -26,7 +28,7 @@ applications:
       "gui-x": "381"
       "gui-y": "-122.0"
   slurm-controller: 
-    charm: "cs:~omnivector/slurm-controller-5"
+    charm: "cs:~omnivector/slurm-controller"
     constraints: "cores=2 mem=4G"
     num_units: 1
     to:
@@ -35,7 +37,7 @@ applications:
       "gui-x": "90"
       "gui-y": "-497"
   slurm-node: 
-    charm: "cs:~omnivector/slurm-node-5"
+    charm: "cs:~omnivector/slurm-node"
     constraints: "cores=2 mem=4G"
     num_units: 1
     to:
