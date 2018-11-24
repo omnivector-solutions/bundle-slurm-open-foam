@@ -4,7 +4,7 @@ description: |
 applications:
   open-foam:
     series: bionic
-    charm: "~omnivector/open-foam-1"
+    charm: "~omnivector/open-foam-2"
     num_units: 0
   mysql:
     series: xenial
